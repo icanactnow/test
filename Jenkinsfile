@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker 'python:3.5.1' }
+    agent { docker 'centos:7' }
     stages {
         stage('build') {
             steps {
-                bat 'python --version'
+                sh 'python --version'
             }
         }
     }
